@@ -12,36 +12,17 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
     {
         //
         // GET: /Response/
-        [HttpGet]
-        [HttpPost]
         public ActionResult Index()
         {
-            ActionResult result = null;
-            switch (HttpContext.Request.HttpMethod)
-            {
-                case "GET":
-                    result = IndexGet();
-                    break;
-                case "POST":
-                    result = IndexPost();
-                    break;
-                default:
-                    result = null;
-                    break;
-            }
-            return result;
+            return View();
         }
 
-        private ActionResult IndexPost()
+        [HttpPost]
+        private ActionResult SmsResponse()
         {
             var response = new TwilioResponse();
             response.Say("this is my response");
             return new TwiMLResult(response);
-        }
-
-        private ActionResult IndexGet()
-        {
-            return View("Index");
         }
     }
 }
