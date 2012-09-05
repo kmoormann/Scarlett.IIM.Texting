@@ -29,13 +29,23 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
         private string DosageMessage()
         {
             StringBuilder builder = new StringBuilder();
-            builder.AppendFormat("this is my SMS response in reply to \r\n{0}", Body);
+            double[] dosages = Dosages(Body);
+            builder.AppendFormat("dosage raw:  {0} dosage rounded: {1}", dosages[0], dosages[1]);
             return builder.ToString();
         }
 
-        public int BlooodSugarFromBody()
+        public double[] Dosages(string body)
         {
-            return 0;
+            var nums = body.Split(' ').ToList();
+            int bloodSugar = Int32.Parse(nums[0]);
+            int carbs = Int32.Parse(nums[1]);
+            int correctionFactor = 150;
+            int targetBloodSugar = 150;
+            int insulinToCarbRatio = 50;
+
+            double dosage = ((double)carbs / insulinToCarbRatio) + ((bloodSugar - targetBloodSugar) / (double)correctionFactor);
+            return new double[] { dosage, Math.Round(dosage, 1, MidpointRounding.ToEven) };
+
         }
 
         
