@@ -41,7 +41,7 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
 
         private ActionResult IndexGet()
         {
-            throw new NotImplementedException();
+            return View("Index");
         }
     }
 }
