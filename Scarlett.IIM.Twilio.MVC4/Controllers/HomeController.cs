@@ -8,7 +8,7 @@ using Twilio.TwiML.Mvc;
 
 namespace Scarlett.IIM.Twilio.MVC4.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : TwiMLController
     {
         //
         // GET: /Response/
@@ -17,20 +17,12 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult Test()
-        {
-            var response = new TwilioResponse();
-            response.Say("this is my response");
-            return new TwiMLResult(response);
-        }
-
-
         [HttpPost]
         public ActionResult SmsResponse()
         {
             var response = new TwilioResponse();
             response.Say("this is my response");
+            response.Sms("this is my SMS response");
             return new TwiMLResult(response);
         }
     }

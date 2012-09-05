@@ -33,3 +33,6 @@ C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twili
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\obj\Debug\Scarlett.IIM.Twilio.MVC4.Tests.csprojResolveAssemblyReference.cache
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\obj\Debug\Scarlett.IIM.Twilio.MVC4.Tests.dll
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\obj\Debug\Scarlett.IIM.Twilio.MVC4.Tests.pdb
+C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\Twilio.Mvc.dll
+C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\Twilio.Mvc.pdb
+C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\Twilio.Mvc.xml

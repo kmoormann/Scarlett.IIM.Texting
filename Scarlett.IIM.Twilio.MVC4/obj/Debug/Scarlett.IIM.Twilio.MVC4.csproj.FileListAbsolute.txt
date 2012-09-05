@@ -38,3 +38,4 @@ C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twili
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4\bin\Twilio.Twiml.xml
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4\obj\Debug\Scarlett.IIM.Twilio.MVC4.dll
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4\obj\Debug\Scarlett.IIM.Twilio.MVC4.pdb
+C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4\obj\Debug\Scarlett.IIM.Twilio.MVC4.csprojResolveAssemblyReference.cache
