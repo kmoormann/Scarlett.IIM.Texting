@@ -29,7 +29,7 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
         private string DosageMessage()
         {
             StringBuilder builder = new StringBuilder();
-            double[] dosages = Dosages(Body);
+            double[] dosages = Dosages(smsModel.Body);
             builder.AppendFormat("dosage raw:  {0} dosage rounded: {1}", dosages[0], dosages[1]);
             return builder.ToString();
         }
