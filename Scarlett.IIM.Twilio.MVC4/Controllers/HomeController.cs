@@ -22,8 +22,13 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
         {
             var response = new TwilioResponse();
             response.Say("this is my response");
-            response.Sms("this is my SMS response");
+            response.Sms("this is my SMS response in reply to \r\n{0}",Body);
             return new TwiMLResult(response);
+        }
+
+        private string DosageCalculator()
+        {
+            return null;
         }
     }
 }
