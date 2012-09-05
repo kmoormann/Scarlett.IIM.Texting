@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scarlett.IIM.Twilio.MVC4", "Scarlett.IIM.Twilio.MVC4\Scarlett.IIM.Twilio.MVC4.csproj", "{08607AED-4424-4B14-B81E-1F2A3A307837}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scarlett.IIM.Twilio.MVC4.Tests", "Scarlett.IIM.Twilio.MVC4.Tests\Scarlett.IIM.Twilio.MVC4.Tests.csproj", "{156ECB29-B654-4F4B-87B4-1682139F4785}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08607AED-4424-4B14-B81E-1F2A3A307837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08607AED-4424-4B14-B81E-1F2A3A307837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08607AED-4424-4B14-B81E-1F2A3A307837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08607AED-4424-4B14-B81E-1F2A3A307837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{156ECB29-B654-4F4B-87B4-1682139F4785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{156ECB29-B654-4F4B-87B4-1682139F4785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{156ECB29-B654-4F4B-87B4-1682139F4785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{156ECB29-B654-4F4B-87B4-1682139F4785}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
