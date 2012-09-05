@@ -46,14 +46,6 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
 
             base.OnActionExecuting(filterContext);
         }
-
-        //
-        // GET: /Twiml/
-
-        public virtual ActionResult Index()
-        {
-            return View();
-        }
     }
 
 }
