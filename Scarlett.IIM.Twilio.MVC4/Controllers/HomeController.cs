@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using Twilio.TwiML;
@@ -21,14 +22,22 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
         public ActionResult SmsResponse()
         {
             var response = new TwilioResponse();
-            response.Say("this is my response");
-            response.Sms("this is my SMS response in reply to \r\n{0}",Body);
+            response.Sms(DosageMessage());
             return new TwiMLResult(response);
         }
 
-        private string DosageCalculator()
+        private string DosageMessage()
         {
-            return null;
+            StringBuilder builder = new StringBuilder();
+            builder.AppendFormat("this is my SMS response in reply to \r\n{0}", Body);
+            return builder.ToString();
         }
+
+        public int BlooodSugarFromBody()
+        {
+            return 0;
+        }
+
+        
     }
 }
