@@ -20,6 +20,7 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
         [HttpPost]
         private ActionResult SmsResponse()
         {
+            return View();
             var response = new TwilioResponse();
             response.Say("this is my response");
             return new TwiMLResult(response);
