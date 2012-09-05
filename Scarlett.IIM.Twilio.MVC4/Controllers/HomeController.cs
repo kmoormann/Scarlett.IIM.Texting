@@ -8,7 +8,7 @@ using Twilio.TwiML.Mvc;
 
 namespace Scarlett.IIM.Twilio.MVC4.Controllers
 {
-    public class ResponseController : Controller
+    public class HomeController : Controller
     {
         //
         // GET: /Response/
