@@ -36,7 +36,8 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
 
         public double[] Dosages(string body)
         {
-            var nums = body.Split(' ').ToList();
+            var nums = null == body ? null : body.Split(' ').ToList();
+            if (nums == null) return new double[] { 0, 0 };
             int bloodSugar = Int32.Parse(nums[0]);
             int carbs = Int32.Parse(nums[1]);
             int correctionFactor = 150;
