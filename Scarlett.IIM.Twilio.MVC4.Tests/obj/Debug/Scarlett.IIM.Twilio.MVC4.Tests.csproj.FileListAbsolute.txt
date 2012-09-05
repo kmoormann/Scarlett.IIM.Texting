@@ -15,7 +15,6 @@ C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twili
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\System.Web.WebPages.Razor.dll
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\System.Web.Optimization.dll
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\Twilio.Twiml.dll
-C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\Twilio.Mvc.dll
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\WebGrease.dll
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\Antlr3.Runtime.dll
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\Scarlett.IIM.Twilio.MVC4.pdb
@@ -31,8 +30,6 @@ C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twili
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\Twilio.Twiml.pdb
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\Twilio.Twiml.xml
-C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\Twilio.Mvc.pdb
-C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\bin\Debug\Twilio.Mvc.xml
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\obj\Debug\Scarlett.IIM.Twilio.MVC4.Tests.csprojResolveAssemblyReference.cache
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\obj\Debug\Scarlett.IIM.Twilio.MVC4.Tests.dll
 C:\Users\kevin.moormann\Documents\GitHub\Scarlett.IIM.Texting\Scarlett.IIM.Twilio.MVC4.Tests\obj\Debug\Scarlett.IIM.Twilio.MVC4.Tests.pdb

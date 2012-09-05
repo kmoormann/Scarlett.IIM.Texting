@@ -17,10 +17,18 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
             return View();
         }
 
-        [HttpPost]
-        private ActionResult SmsResponse()
+        [HttpGet]
+        public ActionResult Test()
         {
-            return View();
+            var response = new TwilioResponse();
+            response.Say("this is my response");
+            return new TwiMLResult(response);
+        }
+
+
+        [HttpPost]
+        public ActionResult SmsResponse()
+        {
             var response = new TwilioResponse();
             response.Say("this is my response");
             return new TwiMLResult(response);
