@@ -24,23 +24,30 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
         public ActionResult SmsResponse()
         {
             var response = new TwilioResponse();
-            var message = Broadcast(this.smsModel.Body);
+            var message = Broadcast(this.smsModel.Body, this.smsModel.From);
             response.Sms(message);
             return new TwiMLResult(response);
         }
 
-        public string Broadcast(string recieved)
+        public string Broadcast(string recieved, string fromPhone)
         {
             var twilio = new TwilioRestClient("AC654fe8d243f96cb77397f0f280ab504f"
                                             , "f86acec80f8bea5ff10db08837804f80");
             var myMsg = OutboundMessage(recieved);
-            var msg = twilio.SendSmsMessage(twilioNumber
-                , phoneNumbers[0]
-                , myMsg);
 
-            var msg2 = twilio.SendSmsMessage(twilioNumber
-    , phoneNumbers[1]
-    , myMsg);
+            //var
+            //foreach(var outboundNumber in phoneNumbers
+            //var msg = twilio.SendSmsMessage(twilioNumber
+            //    , phoneNumbers[0]
+            //    , myMsg);
+            foreach(var outboundNumber in phoneNumbers)
+            {
+                if (!outboundNumber.Equals(fromPhone))
+                    twilio.SendSmsMessage(twilioNumber
+                                            , phoneNumbers[1]
+                                            , myMsg);
+            }
+
             return myMsg;
 
         }
@@ -52,7 +59,7 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
         }
 
         private string twilioNumber = "8324314732";
-        private List<string> phoneNumbers = new List<string>() { "713461427", "8322761115" };
+        private List<string> phoneNumbers = new List<string>() { "+17134691427", "+18322761115" };
 
 
 
