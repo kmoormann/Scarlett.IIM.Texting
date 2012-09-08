@@ -9,7 +9,7 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
 {
     public class TwiMLController : Controller
     {
-        public SmsTwilioModel smsModel;
+        public SmsModel smsModel;
 
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {

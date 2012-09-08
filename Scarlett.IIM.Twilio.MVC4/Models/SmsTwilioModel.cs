@@ -6,28 +6,11 @@ using System.Web.Mvc;
 
 namespace Scarlett.IIM.Twilio.MVC4.Models
 {
-    public class SmsTwilioModel
+    public class SmsTwilioModel : SmsModel
     {
-        public string CallSid { get; set; }
-        public string To { get; set; }
-        public string From { get; set; }
-        public string AccountSid { get; set; }
-        public string CallStatus { get; set; }
-        public string FromCity { get; set; }
-        public string FromState { get; set; }
-        public string FromZip { get; set; }
-        public string FromCountry { get; set; }
-        public string ToCity { get; set; }
-        public string ToState { get; set; }
-        public string ToZip { get; set; }
-        public string ToCountry { get; set; }
-        public string Digits { get; set; }
-        public string SmsSid { get; set; }
-        public string Body { get; set; }
-
-        public static SmsTwilioModel InitializeModel(ActionExecutingContext filterContext)
+        public static SmsModel InitializeModel(ActionExecutingContext filterContext)
         {
-            var model = new SmsTwilioModel();
+            var model = new SmsModel();
 
             model.CallSid = filterContext.HttpContext.Request.Params["CallSid"];
             model.To = filterContext.HttpContext.Request.Params["To"];
