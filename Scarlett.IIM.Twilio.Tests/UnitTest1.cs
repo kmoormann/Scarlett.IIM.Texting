@@ -101,6 +101,12 @@ namespace Scarlett.IIM.Twilio.Tests
             Assert.AreEqual(expectedDosages[1], actualDosages[1]);
         }
 
+        [TestMethod]
+        public void TestFormat()
+        {
+            Console.Write(new Broadcaster().DosageMessage("165 36"));
+        }
+
         //[TestMethod]
         //public void TestMessaging()
         //{

@@ -36,7 +36,7 @@ namespace Scarlett.IIM.Twilio
         public string DosageMessage(string body)
         {
             var dosages = DosagesFromTextMessage(body);
-            return string.Format("dosage raw:  {0} dosage rounded: {1}", dosages[0], dosages[1]);
+            return string.Format("dosage raw:  {0:0.##} dosage rounded: {1:0.0}", dosages[0], dosages[1]);
             
         }
 
