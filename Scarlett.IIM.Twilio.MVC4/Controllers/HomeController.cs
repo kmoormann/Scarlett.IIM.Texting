@@ -35,11 +35,6 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
                                             , "f86acec80f8bea5ff10db08837804f80");
             var myMsg = OutboundMessage(recieved);
 
-            //var
-            //foreach(var outboundNumber in phoneNumbers
-            //var msg = twilio.SendSmsMessage(twilioNumber
-            //    , phoneNumbers[0]
-            //    , myMsg);
             foreach(var outboundNumber in phoneNumbers)
             {
                 if (!outboundNumber.Equals(fromPhone))
@@ -59,7 +54,7 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
         }
 
         private string twilioNumber = "8324314732";
-        private List<string> phoneNumbers = new List<string>() { "+17134691427", "+18322761115" };
+        private List<string> phoneNumbers = new List<string>() { "+17134691427", "+18322761115", "+12812299434" };
 
 
 
