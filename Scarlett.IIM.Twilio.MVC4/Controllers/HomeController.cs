@@ -39,7 +39,7 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
             {
                 if (!outboundNumber.Equals(fromPhone))
                     twilio.SendSmsMessage(twilioNumber
-                                            , phoneNumbers[1]
+                                            , outboundNumber
                                             , myMsg);
             }
 

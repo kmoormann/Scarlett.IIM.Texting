@@ -21,7 +21,7 @@ namespace Scarlett.IIM.Twilio.MVC4.Tests
         public void TestDontSendToSender()
         {
             var controller = new HomeController();
-            controller.Broadcast("50 150","+18322761115");
+            controller.Broadcast("150 50 THIS IS A TEST FROM KEVIN", "+12812299434");
         }
     }
 }
