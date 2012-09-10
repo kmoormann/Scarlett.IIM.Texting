@@ -30,8 +30,8 @@ namespace Scarlett.IIM.Twilio
                 , receivedBody, DosageMessage(receivedBody));
         }
 
-        private string twilioNumber = "8324314732";
-        private List<string> phoneNumbers = new List<string>(){ "713461427", "8322761115" };
+        private string twilioNumber = "+18324314732";
+        private List<string> phoneNumbers = new List<string>(){ "+17134691427", "+18322761115" };
 
         public string DosageMessage(string body)
         {
