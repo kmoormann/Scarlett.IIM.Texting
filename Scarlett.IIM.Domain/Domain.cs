@@ -94,13 +94,10 @@ namespace Scarlett.IIM.Domain
             get
             {
                 var hour = hourIndex.Hour;
-                InsulinCalculationFactors rtn = null;
+                InsulinCalculationFactors rtn = factorsDictionary[MealsEnum.Lunch];
                 if (hour > 5 && hour < 10)
                     rtn = factorsDictionary[MealsEnum.Breakfast];
-                else if (hour > 10 && hour < 14)
-                    rtn = factorsDictionary[MealsEnum.Lunch];
-                else if (hour > 16 && hour < 25)
-                    rtn = factorsDictionary[MealsEnum.Dinner];
+                //lunch and dinner are the same, only breakfast differs
                 return rtn;
             }
             set
