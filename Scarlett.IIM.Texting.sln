@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scarlett.IIM.Twilio", "Scar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scarlett.IIM.Twilio.Tests", "Scarlett.IIM.Twilio.Tests\Scarlett.IIM.Twilio.Tests.csproj", "{6BB01046-CF64-4835-A927-378AEE1F2843}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scarlett.IIM.Domain", "Scarlett.IIM.Domain\Scarlett.IIM.Domain.csproj", "{3AA574CA-0F4C-4B68-BAE8-CBC68012B29E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scarlett.IIM.Domain.Tests", "Scarlett.IIM.Domain.Tests\Scarlett.IIM.Domain.Tests.csproj", "{8CBFBD29-CAE9-402B-9038-E5272E5E3B13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{6BB01046-CF64-4835-A927-378AEE1F2843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BB01046-CF64-4835-A927-378AEE1F2843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BB01046-CF64-4835-A927-378AEE1F2843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AA574CA-0F4C-4B68-BAE8-CBC68012B29E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AA574CA-0F4C-4B68-BAE8-CBC68012B29E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AA574CA-0F4C-4B68-BAE8-CBC68012B29E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AA574CA-0F4C-4B68-BAE8-CBC68012B29E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CBFBD29-CAE9-402B-9038-E5272E5E3B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CBFBD29-CAE9-402B-9038-E5272E5E3B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CBFBD29-CAE9-402B-9038-E5272E5E3B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CBFBD29-CAE9-402B-9038-E5272E5E3B13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

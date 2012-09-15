@@ -13,7 +13,7 @@ namespace Scarlett.IIM.Twilio.MVC4.Tests
         {
             var controller = new HomeController(); 
 
-            var message =  (new HomeController()).Broadcast("50 150","+18322761115");
+           // var message =  (new HomeController()).Broadcast("50 150","+18322761115");
             //Console.WriteLine(message);
         }
 
@@ -21,7 +21,7 @@ namespace Scarlett.IIM.Twilio.MVC4.Tests
         public void TestDontSendToSender()
         {
             var controller = new HomeController();
-            controller.Broadcast("150 50 THIS IS A TEST FROM KEVIN", "+12812299434");
+            //controller.Broadcast("150 50 THIS IS A TEST FROM KEVIN", "+12812299434");
         }
     }
 }

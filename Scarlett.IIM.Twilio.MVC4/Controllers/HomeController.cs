@@ -24,39 +24,34 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
         public ActionResult SmsResponse()
         {
             var response = new TwilioResponse();
-            var message = Broadcast(this.smsModel.Body, this.smsModel.From);
-            response.Sms(message);
+            try
+            {
+
+                var message = GetResponseMessage();
+                Broadcast(message);
+                response.Sms(message);
+            }
+            catch (Exception e)
+            {
+                var message = string.Format("There was an error processing your message: {0}", smsModel.Body);
+                response.Sms(message);
+            }
             return new TwiMLResult(response);
         }
 
-        public string Broadcast(string recieved, string fromPhone)
+        private string GetResponseMessage()
         {
-            var twilio = new TwilioRestClient("AC654fe8d243f96cb77397f0f280ab504f"
-                                            , "f86acec80f8bea5ff10db08837804f80");
-            var myMsg = OutboundMessage(recieved);
-
-            foreach(var outboundNumber in phoneNumbers)
-            {
-                if (!outboundNumber.Equals(fromPhone))
-                    twilio.SendSmsMessage(twilioNumber
-                                            , outboundNumber
-                                            , myMsg);
-            }
-
-            return myMsg;
-
+            return Domain.DosageMessageCreator.Create(this.smsModel);
         }
 
-        public string OutboundMessage(string receivedBody)
+        public void Broadcast(string message)
         {
-            return string.Format("Recieved {0}. Recommendations {1}"
-                , receivedBody, (new Broadcaster()).DosageMessage(receivedBody));
+            var phoneNums = phoneNumbers.Where(x => !x.Equals(this.smsModel.From));
+            var sender = new TextMessageSender();
+            sender.Send(message, phoneNumbers);
         }
-
-        private string twilioNumber = "+18324314732";
+        
         private List<string> phoneNumbers = new List<string>() { "+17134691427", "+18322761115", "+12812299434" };
-
-
 
 
     }

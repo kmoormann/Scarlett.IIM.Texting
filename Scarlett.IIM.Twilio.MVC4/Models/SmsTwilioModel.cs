@@ -28,6 +28,12 @@ namespace Scarlett.IIM.Twilio.MVC4.Models
             model.Digits = filterContext.HttpContext.Request.Params["Digits"];
             model.SmsSid = filterContext.HttpContext.Request.Params["SmsSid"];
             model.Body = filterContext.HttpContext.Request.Params["Body"];
+            //model.DateCreated = DateTime.Parse(filterContext.HttpContext.Request.Params["DateCreated"]);
+            DateTime tmpDate = DateTime.Now;
+            if (DateTime.TryParse(filterContext.HttpContext.Request.Params["DateSent"], out tmpDate))
+            {
+                model.DateSent = tmpDate;
+            };
 
             return model;
         }

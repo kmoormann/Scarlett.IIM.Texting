@@ -24,6 +24,7 @@ namespace Scarlett.IIM.Twilio
         public string Digits { get; set; }
         public string SmsSid { get; set; }
         public string Body { get; set; }
+        public DateTime DateSent {get; set;}
     }
 }
 
