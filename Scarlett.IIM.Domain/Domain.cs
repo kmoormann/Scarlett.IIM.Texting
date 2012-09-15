@@ -9,9 +9,9 @@ namespace Scarlett.IIM.Domain
 {
     public class InsulinCalculationFactors
     {
-        public int correctionFactor;
-        public int targetBloodSugar;
-        public int insulinToCarbRatio;
+        public double correctionFactor;
+        public double targetBloodSugar;
+        public double insulinToCarbRatio;
 
     }
     public static class DosageMessageCreator
@@ -109,8 +109,8 @@ namespace Scarlett.IIM.Domain
 
     public class DosageVariables : InsulinCalculationFactors
     {
-        public int bloodSugar;
-        public int carbs;
+        public double bloodSugar;
+        public double carbs;
     }
 
 
@@ -138,7 +138,7 @@ namespace Scarlett.IIM.Domain
             if (_variables.bloodSugar < _variables.targetBloodSugar)
                 return 0;
             else
-                return ((_variables.bloodSugar - _variables.targetBloodSugar) / (double)_variables.correctionFactor);
+                return ((_variables.bloodSugar - _variables.targetBloodSugar) / _variables.correctionFactor);
         }
     }
 

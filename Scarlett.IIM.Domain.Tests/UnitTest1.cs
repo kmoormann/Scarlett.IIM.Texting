@@ -34,6 +34,57 @@ namespace Scarlett.IIM.Domain.Tests
     }
 
     [TestClass]
+    public class DosageCalculatorTests
+    {
+        [TestMethod]
+        public void FoodDosageCarbsEqualToRatioTest()
+        {
+            //Arrange
+            var dosageVariables = new DosageVariables()
+            {
+                insulinToCarbRatio = 50
+                ,bloodSugar = 150
+                ,correctionFactor = 180
+                ,targetBloodSugar = 150
+                ,carbs = 50
+            };
+            var calc = new DosageCalulcator(dosageVariables);
+
+            //Act
+            var dosage = calc.Calculate();
+
+            //Assert
+            Assert.AreEqual(1, dosage);
+
+
+        }
+
+        [TestMethod]
+        public void FoodDosageCarbsHigherThanRatioTest()
+        {
+            //Arrange
+            var dosageVariables = new DosageVariables()
+            {
+                insulinToCarbRatio = 30,
+                bloodSugar = 150,
+                correctionFactor = 180,
+                targetBloodSugar = 150,
+                carbs = 40
+            };
+            var calc = new DosageCalulcator(dosageVariables);
+
+            //Act
+            var dosage = calc.Calculate();
+
+            //Assert
+            Assert.AreEqual((double)40/30, dosage);
+
+
+        }
+    }
+
+
+    [TestClass]
     public class InslinCalculatorFactorsRepositoryTests
     {
         [TestMethod]
