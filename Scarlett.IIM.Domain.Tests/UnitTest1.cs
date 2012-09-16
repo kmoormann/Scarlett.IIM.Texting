@@ -81,6 +81,172 @@ namespace Scarlett.IIM.Domain.Tests
 
 
         }
+
+        [TestMethod]
+        public void BloodGluscoseDosageCalcHigherThanTarget()
+        {
+            //Arrange
+            var dosageVariables = new DosageVariables()
+            {
+                insulinToCarbRatio = 30,
+                bloodSugar = 180,
+                correctionFactor = 180,
+                targetBloodSugar = 150,
+                carbs = 0
+            };
+            var calc = new DosageCalulcator(dosageVariables);
+            var expected = (dosageVariables.bloodSugar - dosageVariables.targetBloodSugar)/dosageVariables.correctionFactor;
+            //Act
+            var dosage = calc.Calculate();
+
+            //Assert
+            Assert.AreEqual(expected, dosage);
+
+
+        }
+
+        [TestMethod]
+        public void BloodGluscoseDosageCalcLowerThanTarget()
+        {
+            //Arrange
+            var dosageVariables = new DosageVariables()
+            {
+                insulinToCarbRatio = 30,
+                bloodSugar = 90,
+                correctionFactor = 180,
+                targetBloodSugar = 150,
+                carbs = 0
+            };
+            var calc = new DosageCalulcator(dosageVariables);
+            var expected = (double)0;
+            //Act
+            var dosage = calc.Calculate();
+
+            //Assert
+            Assert.AreEqual(expected, dosage);
+
+
+        }
+
+        [TestMethod]
+        public void RoundingUpTest()
+        {
+            //Arrange
+            var carbs = 0.35 * 50;
+            var dosageVariables = new DosageVariables()
+            {
+                insulinToCarbRatio = 50,
+                bloodSugar = 90,
+                correctionFactor = 180,
+                targetBloodSugar = 150,
+                carbs = carbs
+            };
+            var calc = new DosageCalulcator(dosageVariables);
+            var expected = (double)0.5;
+            //Act
+            var dosage = calc.Calculate().Round(0.5);
+
+            //Assert
+            Assert.AreEqual(expected, dosage);
+
+
+        }
+
+        [TestMethod]
+        public void RoundingUpTestHalfWay()
+        {
+            //Arrange
+            var carbs = 0.25 * 50;
+            var dosageVariables = new DosageVariables()
+            {
+                insulinToCarbRatio = 50,
+                bloodSugar = 90,
+                correctionFactor = 180,
+                targetBloodSugar = 150,
+                carbs = carbs
+            };
+            var calc = new DosageCalulcator(dosageVariables);
+            var expected = (double)0.0;
+            //Act
+            var dosage = calc.Calculate().Round(0.5);
+
+            //Assert
+            Assert.AreEqual(expected, dosage);
+
+
+        }
+
+        [TestMethod]
+        public void RoundingUpTestHalfWaywithWholeUnit()
+        {
+            //Arrange
+            var carbs = 1.25 * 50;
+            var dosageVariables = new DosageVariables()
+            {
+                insulinToCarbRatio = 50,
+                bloodSugar = 90,
+                correctionFactor = 180,
+                targetBloodSugar = 150,
+                carbs = carbs
+            };
+            var calc = new DosageCalulcator(dosageVariables);
+            var expected = (double)1.0;
+            //Act
+            var dosage = calc.Calculate().Round(0.5);
+
+            //Assert
+            Assert.AreEqual(expected, dosage);
+
+
+        }
+
+        [TestMethod]
+        public void RoundingUpTestWithWholeUnit()
+        {
+            //Arrange
+            var carbs = 1.31 * 50;
+            var dosageVariables = new DosageVariables()
+            {
+                insulinToCarbRatio = 50,
+                bloodSugar = 90,
+                correctionFactor = 180,
+                targetBloodSugar = 150,
+                carbs = carbs
+            };
+            var calc = new DosageCalulcator(dosageVariables);
+            var expected = (double)1.5;
+            //Act
+            var dosage = calc.Calculate().Round(0.5);
+
+            //Assert
+            Assert.AreEqual(expected, dosage);
+
+
+        }
+
+        [TestMethod]
+        public void RoundingDownTestWithWholeUnit()
+        {
+            //Arrange
+            var carbs = 1.15 * 50;
+            var dosageVariables = new DosageVariables()
+            {
+                insulinToCarbRatio = 50,
+                bloodSugar = 90,
+                correctionFactor = 180,
+                targetBloodSugar = 150,
+                carbs = carbs
+            };
+            var calc = new DosageCalulcator(dosageVariables);
+            var expected = (double)1.0;
+            //Act
+            var dosage = calc.Calculate().Round(0.5);
+
+            //Assert
+            Assert.AreEqual(expected, dosage);
+
+
+        }
     }
 
 
