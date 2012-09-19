@@ -51,7 +51,7 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
             sender.Send(message, phoneNumbers);
         }
         
-        private List<string> phoneNumbers = new List<string>() { "+17134691427", "+18322761115", "+12812299434" };
+        private List<string> phoneNumbers = new List<string>() { "+17134691427"};//, "+18322761115", "+12812299434" };
 
 
     }

@@ -29,7 +29,8 @@ namespace Scarlett.IIM.Twilio.MVC4.Models
             model.SmsSid = filterContext.HttpContext.Request.Params["SmsSid"];
             model.Body = filterContext.HttpContext.Request.Params["Body"];
             //model.DateCreated = DateTime.Parse(filterContext.HttpContext.Request.Params["DateCreated"]);
-            DateTime tmpDate = DateTime.Now;
+            model.DateSent = DateTime.Now;
+            DateTime tmpDate = model.DateSent;
             if (DateTime.TryParse(filterContext.HttpContext.Request.Params["DateSent"], out tmpDate))
             {
                 model.DateSent = tmpDate;
