@@ -25,7 +25,7 @@ namespace Scarlett.IIM.Domain
             dosageCaclulator = new DosageCalulcator(variables);
             rawDosage = dosageCaclulator.Calculate();
             roundedDosage = rawDosage.Round((double)0.5);
-            return MessageFormater(rawDosage, roundedDosage, inputMessage.Body, variables);
+            return MessageFormater(rawDosage, roundedDosage, inputMessage.Body, variables) + string.Format("\r\n Date Recieved: {0}",inputMessage.DateSent);
         }
 
         private static string MessageFormater(double rawDosage, double roundedDosage, string originalMessage, InsulinCalculationFactors factors)
