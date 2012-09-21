@@ -48,7 +48,7 @@ namespace Scarlett.IIM.Twilio.MVC4.Controllers
         {
             var phoneNums = phoneNumbers.Where(x => !x.Equals(this.smsModel.From));
             var sender = new TextMessageSender();
-            sender.Send(message, phoneNumbers);
+            sender.Send(message, phoneNums);
         }
         
         private List<string> phoneNumbers = new List<string>() { "+17134691427", "+18322761115", "+12812299434" };
