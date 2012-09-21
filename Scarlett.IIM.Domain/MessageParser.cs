@@ -26,7 +26,7 @@ namespace Scarlett.IIM.Domain
         private static InsulinCalculationFactors GetFactors(this SmsModel sms)
         {
             var repo = new InslinCacluationFactorsRepository();
-            return repo[sms.DateSent];
+            return repo[sms.DateSent.AddHours(-5)]; //moving from UTC to "central" time.  This is temp until timezone features are figured out
         }
 
         public static int GetBloodSugar(this SmsModel sms)
